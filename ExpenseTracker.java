@@ -1,5 +1,4 @@
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class ExpenseTracker {
@@ -8,26 +7,54 @@ public class ExpenseTracker {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Category: ");
-        String category = sc.nextLine();
+        System.out.println("1. Add Expense");
+        System.out.println("2. View Expenses");
 
-        System.out.print("Amount: ");
-        double amount = sc.nextDouble();
+        int choice = sc.nextInt();
+        sc.nextLine();
 
-        Expense expense = new Expense(category, amount);
+        if(choice == 1){
 
-        try {
-            FileWriter writer =
-                    new FileWriter("expenses.txt", true);
+            System.out.print("Category: ");
+            String category = sc.nextLine();
 
-            writer.write(expense.toString() + "\n");
+            System.out.print("Amount: ");
+            double amount = sc.nextDouble();
 
-            writer.close();
+            Expense expense = new Expense(category, amount);
 
-            System.out.println("Expense saved successfully.");
+            try{
+                FileWriter writer =
+                        new FileWriter("expenses.txt", true);
 
-        } catch(IOException e) {
-            System.out.println(e.getMessage());
+                writer.write(expense.toString() + "\n");
+
+                writer.close();
+
+                System.out.println("Expense saved successfully.");
+
+            }catch(IOException e){
+                System.out.println(e.getMessage());
+            }
+
+        }else if(choice == 2){
+
+            try{
+                BufferedReader reader =
+                        new BufferedReader(
+                                new FileReader("expenses.txt"));
+
+                String line;
+
+                while((line = reader.readLine()) != null){
+                    System.out.println(line);
+                }
+
+                reader.close();
+
+            }catch(IOException e){
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
