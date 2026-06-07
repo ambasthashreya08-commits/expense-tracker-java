@@ -13,7 +13,7 @@ public class ExpenseTracker {
         int choice = sc.nextInt();
         sc.nextLine();
 
-        if(choice == 1){
+        if (choice == 1) {
 
             System.out.print("Category: ");
             String category = sc.nextLine();
@@ -23,7 +23,8 @@ public class ExpenseTracker {
 
             Expense expense = new Expense(category, amount);
 
-            try{
+            try {
+
                 FileWriter writer =
                         new FileWriter("expenses.txt", true);
 
@@ -33,28 +34,41 @@ public class ExpenseTracker {
 
                 System.out.println("Expense saved successfully.");
 
-            }catch(IOException e){
+            } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
 
-        }else if(choice == 2){
+        } else if (choice == 2) {
 
-            try{
+            double total = 0;
+
+            try {
+
                 BufferedReader reader =
                         new BufferedReader(
                                 new FileReader("expenses.txt"));
 
                 String line;
 
-                while((line = reader.readLine()) != null){
+                while ((line = reader.readLine()) != null) {
+
                     System.out.println(line);
+
+                    String[] parts = line.split(",");
+
+                    total += Double.parseDouble(parts[1]);
                 }
+
+                System.out.println("----------------");
+                System.out.println("Total Expense: " + total);
 
                 reader.close();
 
-            }catch(IOException e){
+            } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
         }
+
+        sc.close();
     }
 }
