@@ -1,112 +1,256 @@
-# Expense Tracker
+# 💰 Expense Tracker
 
-A Java-based console application for tracking daily expenses.
+<div align="center">
 
-## Features
+![Java](https://img.shields.io/badge/Java-25-orange?style=for-the-badge&logo=openjdk)
+![Console App](https://img.shields.io/badge/Application-Console-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![GitHub](https://img.shields.io/badge/Project-Java-green?style=for-the-badge)
 
-- Add expense
-- View expenses
-- Store expenses in file
-- Expense summary
+### 📊 Smart Console-Based Expense Management System
 
-## Tech Stack
+Track expenses, categorize spending, calculate totals, and analyze spending habits directly from the terminal.
 
-(Java + OOP + File Handling)
-Java
-File Handling
+</div>
 
-## Running the Application
+---
 
-This project is a **console-based Java Expense Tracker**. All interactions are performed through the terminal/command prompt.
+# 🎯 Project Overview
 
-### Compile the Project
+Expense Tracker is a Java-based console application designed to help users manage daily expenses efficiently.
 
-Before running the application, compile the Java source files:
+The application allows users to:
+
+✅ Add expenses
+
+✅ Categorize spending
+
+✅ View all recorded expenses
+
+✅ Calculate total expenditure
+
+✅ Analyze category-wise spending
+
+✅ Store expense data persistently using files
+
+---
+
+# ✨ Features
+
+| Feature | Description |
+|----------|-------------|
+| ➕ Add Expense | Record a new expense |
+| 📂 Categories | Organize expenses by category |
+| 📄 View Expenses | Display all saved expenses |
+| 💰 Total Expense | Calculate total spending |
+| 📊 Category Summary | Analyze spending by category |
+| 💾 File Storage | Persist data in text files |
+| ⚡ Lightweight | Runs directly from terminal |
+
+---
+
+# 🏗️ Tech Stack
+
+```text
+Language
+└── Java
+
+Storage
+└── Text File (expenses.txt)
+
+Concepts Used
+├── OOP
+├── File Handling
+├── Exception Handling
+├── Collections
+└── User Input Handling
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+expense-tracker-java
+│
+├── Expense.java
+├── ExpenseTracker.java
+├── expenses.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
+# ⚙️ How To Run
+
+## Compile
 
 ```bash
 javac Expense.java ExpenseTracker.java
 ```
 
-### Run the Application
-
-Execute the following command:
+## Execute
 
 ```bash
 java ExpenseTracker
 ```
 
-### Available Options
+---
 
-After running the program, you will see:
+# 🖥️ Console Preview
+
+### Main Menu
 
 ```text
 ===== Expense Tracker =====
+
 1. Add Expense
 2. View Expenses
 3. Category Summary
 4. Exit
 ```
 
-### Example Usage
+---
 
-#### Add an Expense
+### Adding Expense
 
 ```text
-Enter Choice: 1
 Category: Food
-Amount: 300
-```
+Amount: 250
 
-Output:
-
-```text
 Expense saved successfully.
 ```
 
-#### View All Expenses
+---
+
+### Viewing Expenses
 
 ```text
-Enter Choice: 2
+Food,250
+Travel,500
+Shopping,1200
+
+----------------
+Total Expense: 1950
 ```
 
-Output:
+---
+
+### Category Summary
 
 ```text
-Expense History:
-Food,300.0
-Travel,500.0
-----------------------
-Total Expense: 800.0
+Food: 250
+Travel: 500
+Shopping: 1200
 ```
 
-#### View Category Summary
+---
+
+# 🔄 Application Workflow
 
 ```text
-Enter Choice: 3
+User
+ │
+ ▼
+Add Expense
+ │
+ ▼
+Save To File
+ │
+ ▼
+View Expenses
+ │
+ ▼
+Calculate Totals
+ │
+ ▼
+Category Analysis
 ```
 
-Output:
+---
+
+# 📸 Application Demo
+
+### Recording Expenses
+
+<img width="900" src="https://via.placeholder.com/900x350.png?text=Add+Expense+Terminal+Screenshot">
+
+---
+
+### Viewing Reports
+
+<img width="900" src="https://via.placeholder.com/900x350.png?text=Expense+Summary+Screenshot">
+
+---
+
+# 📈 Example Data
 
 ```text
-===== Category Summary =====
-Food: 300.0
-Travel: 500.0
-Shopping: 0.0
-Other: 0.0
+Food,250
+Travel,500
+Shopping,1200
+Food,150
 ```
 
-#### Exit the Application
+### Generated Summary
 
 ```text
-Enter Choice: 4
+Food: 400
+Travel: 500
+Shopping: 1200
+
+Total Expense: 2100
 ```
 
-Output:
+---
 
-```text
-Exiting...
-```
+# 🚀 Future Enhancements
 
-### Data Storage
+- 📅 Monthly Expense Reports
+- 📊 Graphical Dashboard
+- 🗄️ Database Integration
+- 📤 CSV Export
+- 🔍 Search Expenses
+- 👤 Multi-User Support
 
-All expenses are stored in the `expenses.txt` file, ensuring data persistence across multiple application runs.
+---
+
+# 🧠 Learning Outcomes
+
+This project demonstrates practical implementation of:
+
+- Object-Oriented Programming
+- Java File Handling
+- Exception Handling
+- Data Persistence
+- Console Application Development
+- User Input Processing
+
+---
+
+# 👨‍💻 Author
+
+### Shreya Ambastha
+
+Aspiring Software Engineer | Java | Spring Boot | Python | Data Analytics
+
+---
+
+# ⭐ Support
+
+If you found this project useful:
+
+🌟 Star the repository
+
+🍴 Fork the repository
+
+📢 Share with others
+
+---
+
+<div align="center">
+
+### 💰 Built with Java
+
+</div>
