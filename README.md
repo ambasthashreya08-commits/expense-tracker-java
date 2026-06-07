@@ -11,6 +11,7 @@ A Java-based console application for tracking daily expenses.
 
 ## Tech Stack
 
+(Java + OOP + File Handling)
 Java
 File Handling
 
